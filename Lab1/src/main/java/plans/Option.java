@@ -5,7 +5,7 @@ public enum Option {
     CALLS_EXTENDED("calls extended"),
     INTERNET("internet"),
     INTERNET_EXTENDED("internet extended"),
-    ROAMING("ROAMING");
+    ROAMING("roaming");
 
     private final String name;
 
