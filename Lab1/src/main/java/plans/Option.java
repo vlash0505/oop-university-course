@@ -1,10 +1,10 @@
 package plans;
 
 public enum Option {
-    CALLS("MINIMUM"),
-    CALLS_EXTENDED("STANDARD"),
-    INTERNET("PREMIUM"),
-    INTERNET_EXTENDED("PREMIUM"),
+    CALLS("calls"),
+    CALLS_EXTENDED("calls extended"),
+    INTERNET("internet"),
+    INTERNET_EXTENDED("internet extended"),
     ROAMING("ROAMING");
 
     private final String name;

@@ -1,6 +1,7 @@
 package company;
 
 import plans.DataPlan;
+import plans.StandardPlan;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -34,7 +35,7 @@ public class NetworkProvider {
 
     public List<Client> getClientsByPlan(DataPlan dataPlan) {
         List<Client> result = new ArrayList<>(clients);
-        result.removeIf(e -> !e.getDataPlan().equals(dataPlan));
+        result.removeIf(e -> e.getDataPlan().getClass() != dataPlan.getClass());
 
         return result;
     }

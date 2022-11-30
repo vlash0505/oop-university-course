@@ -3,9 +3,9 @@ package plans;
 import java.util.List;
 
 public abstract class DataPlan {
-    private int fee;
-    private final String name;
-    private final List<Option> options;
+    protected final int fee;
+    protected final String name;
+    protected final List<Option> options;
 
     public DataPlan(String name, int fee, List<Option> options) {
         this.name = name;
@@ -21,15 +21,16 @@ public abstract class DataPlan {
         return fee;
     }
 
-    public void setFee(int fee) {
-        this.fee = fee;
-    }
-
     public List<Option> getOptions() {
         return options;
     }
 
-    public void addOption(Option option) {
-        options.add(option);
+    @Override
+    public String toString() {
+        return "DataPlan{" +
+                "fee=" + fee +
+                ", name='" + name + '\'' +
+                ", options=" + options +
+                '}';
     }
 }
